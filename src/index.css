@@ -1,0 +1,199 @@
+:root {
+  --space-0: 0;
+  --space-100: 8px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-600: 48px;
+  --space-700: 56px;
+  --space-900: 72px;
+  --space-1000: 80px;
+  --space-1200: 96px;
+  --space-1300: 104px;
+  --space-1600: 128px;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-orange-300: #ffab6a;
+  --color-orange-500: #ff7e1b;
+
+  --color-grey-50: #f6f8fd;
+  --color-grey-100: #e4e9f2;
+  --color-grey-300: #c3cad9;
+  --color-grey-500: #69707d;
+  --color-grey-950: #1d2026;
+
+  --font-family-base:
+    'Kumbh Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --text-preset-1-font-size: 2.75rem;
+  --text-preset-1-line-height: 1.0909;
+  --text-preset-1-letter-spacing: 0;
+
+  --text-preset-2-font-size: 1.75rem;
+  --text-preset-2-line-height: 1.1429;
+  --text-preset-2-letter-spacing: 0;
+
+  --text-preset-3-font-size: 1rem;
+  --text-preset-3-line-height: 1.625;
+  --text-preset-3-letter-spacing: 0;
+
+  --text-preset-4-font-size: 0.9375rem;
+  --text-preset-4-line-height: 1.7333;
+  --text-preset-4-letter-spacing: 0;
+
+  --text-preset-5-font-size: 0.8125rem;
+  --text-preset-5-line-height: 1.2308;
+  --text-preset-5-letter-spacing: 0.1538em;
+
+  --text-preset-6-font-size: 0.75rem;
+  --text-preset-6-line-height: 1.25;
+  --text-preset-6-letter-spacing: 0.1542em;
+}
+
+.text-preset-1,
+.text-preset-2,
+.text-preset-3,
+.text-preset-4,
+.text-preset-5,
+.text-preset-6 {
+  font-family: var(--font-family-base);
+}
+
+.text-preset-1 {
+  font-size: var(--text-preset-1-font-size);
+  line-height: var(--text-preset-1-line-height);
+  letter-spacing: var(--text-preset-1-letter-spacing);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-preset-2 {
+  font-size: var(--text-preset-2-font-size);
+  line-height: var(--text-preset-2-line-height);
+  letter-spacing: var(--text-preset-2-letter-spacing);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-preset-3 {
+  font-size: var(--text-preset-3-font-size);
+  line-height: var(--text-preset-3-line-height);
+  letter-spacing: var(--text-preset-3-letter-spacing);
+}
+
+.text-preset-3--bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.text-preset-3--regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.text-preset-4 {
+  font-size: var(--text-preset-4-font-size);
+  line-height: var(--text-preset-4-line-height);
+  letter-spacing: var(--text-preset-4-letter-spacing);
+  font-weight: var(--font-weight-regular);
+}
+
+.text-preset-5 {
+  font-size: var(--text-preset-5-font-size);
+  line-height: var(--text-preset-5-line-height);
+  letter-spacing: var(--text-preset-5-letter-spacing);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-preset-6 {
+  font-size: var(--text-preset-6-font-size);
+  line-height: var(--text-preset-6-line-height);
+  letter-spacing: var(--text-preset-6-letter-spacing);
+  font-weight: var(--font-weight-bold);
+}
+
+/* 1) Box sizing + remove default spacing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/* 2) Better text rendering + default font */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family:
+    var(--font-family-base),
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+}
+
+/* 3) Media defaults: don’t overflow containers */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 4) Form elements: inherit typography */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 5) Headings/paragraphs: avoid weird overflow */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: break-word;
+}
+
+/* 6) Accessible focus (great for ecommerce: nav, cart, checkout) */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* 7) Reduce motion when user prefers it */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
